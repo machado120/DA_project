@@ -1,0 +1,93 @@
+Models: User, Artigo, Compras, Tipo de ARTIGO, Orçamento
+
+Vistas: Login, Janela Principal, Gestao de tipos de Artigo
+
+
+
+
+
+
+
+
+
+sql --------
+
+1. Tabela:--------------------------------------------------------------------- Utilizadores
+Armazena os dados de acesso e identificação dos membros do agregado familiar.
+
+Id (INT, PK, Identity): Chave primária.
+
+Username (NVARCHAR(50), Unique): Nome de utilizador único.
+
+Password (NVARCHAR(MAX)): Senha (idealmente em hash).
+
+2. Tabela: --------------------------------------------------------------------- TiposArtigo
+Define as categorias para organizar os produtos.
+
+Id (INT, PK, Identity): Chave primária.
+
+Descricao (NVARCHAR(100)): Nome da categoria (ex: Mercearia, Higiene).
+
+3. Tabela:-----------------------------------------------------------------------   Artigos
+Os produtos propriamente ditos, vinculados a um tipo.
+
+Id (INT, PK, Identity): Chave primária.
+
+Nome (NVARCHAR(100)): Nome do artigo.
+
+TipoArtigoId (INT, FK): Relacionamento com TiposArtigo.
+
+4. Tabela:----------------------------------------------------------------------  Orcamentos
+Guarda o valor máximo definido para o mês.
+
+Id (INT, PK, Identity): Chave primária.
+
+Mes (INT): Mês de referência (1-12).
+
+Ano (INT): Ano de referência.
+
+ValorMaximo (DECIMAL(18,2)): O orçamento estipulado.
+
+CriadoPorUtilizadorId (INT, FK): Relacionamento com Utilizadores.
+
+AlteradoPorUtilizadorId (INT, FK): Relacionamento com Utilizadores.
+
+5. Tabela: --------------------------------------------------------------------   Compras
+Representa o cabeçalho da lista de compras (o "planeamento").
+
+Id (INT, PK, Identity): Chave primária.
+
+NomeCompra (NVARCHAR(100)): Identificador da lista.
+
+DataCriacao (DATETIME): Data em que foi criada.
+
+DataAlteracao (DATETIME): Data da última modificação.
+
+DataFecho (DATETIME, Nullable): Registada apenas quando a compra é encerrada.
+
+Estado (BIT/INT): Indica se está "Aberta" ou "Fechada".
+
+CriadaPorUtilizadorId (INT, FK): Quem criou a lista.
+
+AlteradaPorUtilizadorId (INT, FK): Quem alterou a lista.
+
+FechadaPorUtilizadorId (INT, FK, Nullable): Quem finalizou a compra.
+
+6. Tabela:----------------------------------------------------------------------  ItensCompra
+Esta é a tabela de junção entre Compras e Artigos, contendo os detalhes de cada item.
+
+Id (INT, PK, Identity): Chave primária.
+
+CompraId (INT, FK): Relacionamento com Compras.
+
+ArtigoId (INT, FK): Relacionamento com Artigos.
+
+QuantidadePrevista (DECIMAL(18,2)): O que se planeou comprar.
+
+QuantidadeAdquirida (DECIMAL(18,2)): O que foi realmente comprado.
+
+PrecoUnitario (DECIMAL(18,2)): Preço real pago no momento da compra.
+
+EhPrevisto (BIT): Flag para distinguir se o item foi planeado (True) ou adicionado durante a compra como item não previsto (False).
+
+Observacoes (NVARCHAR(MAX), Nullable): Campo para as notas dos itens não previstos.

@@ -52,8 +52,44 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Artigos.cs" />
+    <Compile Include="Models\Compras.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Orcamentos.cs" />
+    <Compile Include="Models\TipoArtigos.cs" />
+    <Compile Include="Models\Utilizadores.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Gestao_Artigos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Gestao_Artigos.Designer.cs">
+      <DependentUpon>Gestao_Artigos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Gestao_Orcamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Gestao_Orcamentos.Designer.cs">
+      <DependentUpon>Gestao_Orcamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Gestao_Tipo_Artigos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Gestao_Tipo_Artigos.Designer.cs">
+      <DependentUpon>Gestao_Tipo_Artigos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +111,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

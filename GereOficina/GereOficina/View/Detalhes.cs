@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GereOficina.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,15 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1.Views
+namespace GereOficina.View
 {
-    public partial class Login : Form
+    public partial class Detalhes : Form
     {
-        public Login()
+        public Detalhes(Cliente cliente)
         {
             InitializeComponent();
+            labelNome.Text = cliente.Nome;
+            labelNif.Text = cliente.Nif;
         }
-
-        
     }
 }

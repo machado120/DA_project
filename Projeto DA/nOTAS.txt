@@ -1,0 +1,3 @@
+Models: User, Artigo, Compras, Tipo de ARTIGO, Orçamento
+
+Vistas: Login, Janela Principal, Gestao de tipos de Artigo

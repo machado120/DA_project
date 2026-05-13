@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Metadata.Edm;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Controllers;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace WindowsFormsApp1.Views
 {
@@ -26,5 +31,25 @@ namespace WindowsFormsApp1.Views
         {
 
         }
+
+        private void buttonCriarNovoUtilizador_Click(object sender, EventArgs e)
+        {
+            LoginController controller = new LoginController(); //instancia do controller para chamar o metodo adicionar cliente
+            try
+            {
+                controller.AdicionarCliente(textUsername.Text, txtPassword.Text);//chama o metodo adicionar cliente do controller para adicionar um cliente a base de dados
+
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message);//mostra a mensagem de erro caso haja um erro
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao criar cliente!");//mostra a mensagem de erro caso haja um erro
+            }
+        }
+
+
     }
 }

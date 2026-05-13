@@ -10,7 +10,6 @@ namespace WindowsFormsApp1.Models
     public class Orcamento
     {
         // The [Key] attribute explicitly tells Entity Framework this is the Primary Key & Identity
-        [Key]
         public int Id { get; set; }
 
         public int Mes { get; set; } // Mês de referência (1-12)

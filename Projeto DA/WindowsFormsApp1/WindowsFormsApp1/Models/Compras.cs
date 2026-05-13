@@ -10,7 +10,6 @@ namespace WindowsFormsApp1.Models
     public class Compras
     {
         // Chave Primária e Auto-incremento
-        [Key]
         public int Id { get; set; }
 
         // Nome da lista (ex: "Compras Semanais - Continente")

@@ -10,7 +10,6 @@ namespace WindowsFormsApp1.Models
     public class Item
     {
 
-        [Key]
         public int Id { get; set; }
 
         // --- Foreign Keys ---

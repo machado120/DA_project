@@ -122,16 +122,15 @@
             this.buttonCriarNovoUtilizador.TabIndex = 4;
             this.buttonCriarNovoUtilizador.Text = "Criar utilizador";
             this.buttonCriarNovoUtilizador.UseVisualStyleBackColor = false;
+            this.buttonCriarNovoUtilizador.Click += new System.EventHandler(this.buttonCriarNovoUtilizador_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.png_clipart_padlock_computer_icons_security_padlock_technic_area_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 132);
             this.pictureBox1.Location = new System.Drawing.Point(-7, 132);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(163, 108);
             this.pictureBox1.Size = new System.Drawing.Size(178, 108);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;

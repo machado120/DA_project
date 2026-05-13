@@ -4,12 +4,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-<<<<<<< Updated upstream
 using WindowsFormsApp1.Views;
-=======
 using WindowsFormsApp1.Models;
-
->>>>>>> Stashed changes
 
 namespace WindowsFormsApp1
 {

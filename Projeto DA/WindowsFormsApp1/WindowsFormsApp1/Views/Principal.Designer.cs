@@ -30,6 +30,9 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ficheiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paraPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paraCsvToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utilizadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,15 +42,21 @@
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planeamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estatísticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Nome_Compra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Data_Criacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Criada_por = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
-            this.exportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.paraPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.paraCsvToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.labelComprasAberto = new System.Windows.Forms.Label();
+            this.labelDetalhesCompra = new System.Windows.Forms.Label();
+            this.colTipoArtigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colArtigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colQtdPrevista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colQtdAdquirida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecoUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nomeCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DTACriacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CriadaPor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +70,7 @@
             this.comprasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1196, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,13 +80,35 @@
             this.exportarToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.ficheiroToolStripMenuItem.Name = "ficheiroToolStripMenuItem";
-            this.ficheiroToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
+            this.ficheiroToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.ficheiroToolStripMenuItem.Text = "Ficheiro";
+            // 
+            // exportarToolStripMenuItem
+            // 
+            this.exportarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.paraPDFToolStripMenuItem,
+            this.paraCsvToolStripMenuItem});
+            this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
+            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.exportarToolStripMenuItem.Text = "Exportar";
+            // 
+            // paraPDFToolStripMenuItem
+            // 
+            this.paraPDFToolStripMenuItem.Name = "paraPDFToolStripMenuItem";
+            this.paraPDFToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.paraPDFToolStripMenuItem.Text = "Para PDF";
+            // 
+            // paraCsvToolStripMenuItem
+            // 
+            this.paraCsvToolStripMenuItem.Name = "paraCsvToolStripMenuItem";
+            this.paraCsvToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.paraCsvToolStripMenuItem.Text = "Para csv.";
+            this.paraCsvToolStripMenuItem.Click += new System.EventHandler(this.paraCsvToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
             // gestaoToolStripMenuItem
@@ -136,83 +167,153 @@
             this.estatísticaToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.estatísticaToolStripMenuItem.Text = "Estatística";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nome_Compra,
-            this.Data_Criacao,
-            this.Criada_por});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 31);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 366);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // Nome_Compra
-            // 
-            this.Nome_Compra.HeaderText = "Nome da Compra";
-            this.Nome_Compra.MinimumWidth = 6;
-            this.Nome_Compra.Name = "Nome_Compra";
-            this.Nome_Compra.Width = 125;
-            // 
-            // Data_Criacao
-            // 
-            this.Data_Criacao.HeaderText = "Data da Criação";
-            this.Data_Criacao.MinimumWidth = 6;
-            this.Data_Criacao.Name = "Data_Criacao";
-            this.Data_Criacao.Width = 125;
-            // 
-            // Criada_por
-            // 
-            this.Criada_por.HeaderText = "Criada por:";
-            this.Criada_por.MinimumWidth = 6;
-            this.Criada_por.Name = "Criada_por";
-            this.Criada_por.Width = 125;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(179, 403);
+            this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.button1.Location = new System.Drawing.Point(9, 541);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(424, 35);
+            this.button1.Size = new System.Drawing.Size(445, 35);
             this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Aceder ao Modo Compra.";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // exportarToolStripMenuItem
+            // dataGridView2
             // 
-            this.exportarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.paraPDFToolStripMenuItem,
-            this.paraCsvToolStripMenuItem});
-            this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
-            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.exportarToolStripMenuItem.Text = "Exportar";
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colTipoArtigo,
+            this.colArtigo,
+            this.colQtdPrevista,
+            this.colQtdAdquirida,
+            this.colPrecoUnitario});
+            this.dataGridView2.Location = new System.Drawing.Point(464, 88);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridView2.RowTemplate.Height = 50;
+            this.dataGridView2.Size = new System.Drawing.Size(720, 447);
+            this.dataGridView2.TabIndex = 3;
             // 
-            // paraPDFToolStripMenuItem
+            // labelComprasAberto
             // 
-            this.paraPDFToolStripMenuItem.Name = "paraPDFToolStripMenuItem";
-            this.paraPDFToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.paraPDFToolStripMenuItem.Text = "Para PDF";
+            this.labelComprasAberto.AutoSize = true;
+            this.labelComprasAberto.Location = new System.Drawing.Point(7, 69);
+            this.labelComprasAberto.Name = "labelComprasAberto";
+            this.labelComprasAberto.Size = new System.Drawing.Size(127, 16);
+            this.labelComprasAberto.TabIndex = 4;
+            this.labelComprasAberto.Text = "Compras em Aberto";
             // 
-            // paraCsvToolStripMenuItem
+            // labelDetalhesCompra
             // 
-            this.paraCsvToolStripMenuItem.Name = "paraCsvToolStripMenuItem";
-            this.paraCsvToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.paraCsvToolStripMenuItem.Text = "Para csv.";
+            this.labelDetalhesCompra.AutoSize = true;
+            this.labelDetalhesCompra.Location = new System.Drawing.Point(461, 69);
+            this.labelDetalhesCompra.Name = "labelDetalhesCompra";
+            this.labelDetalhesCompra.Size = new System.Drawing.Size(183, 16);
+            this.labelDetalhesCompra.TabIndex = 5;
+            this.labelDetalhesCompra.Text = "Detalhes / Artigos da Compra";
+            // 
+            // colTipoArtigo
+            // 
+            this.colTipoArtigo.HeaderText = "Tipo de Artigo";
+            this.colTipoArtigo.MinimumWidth = 6;
+            this.colTipoArtigo.Name = "colTipoArtigo";
+            this.colTipoArtigo.ReadOnly = true;
+            // 
+            // colArtigo
+            // 
+            this.colArtigo.HeaderText = "Artigo";
+            this.colArtigo.MinimumWidth = 6;
+            this.colArtigo.Name = "colArtigo";
+            this.colArtigo.ReadOnly = true;
+            // 
+            // colQtdPrevista
+            // 
+            this.colQtdPrevista.HeaderText = "Qtd. Prevista";
+            this.colQtdPrevista.MinimumWidth = 6;
+            this.colQtdPrevista.Name = "colQtdPrevista";
+            this.colQtdPrevista.ReadOnly = true;
+            // 
+            // colQtdAdquirida
+            // 
+            this.colQtdAdquirida.HeaderText = "Qtd. Adquirida";
+            this.colQtdAdquirida.MinimumWidth = 6;
+            this.colQtdAdquirida.Name = "colQtdAdquirida";
+            this.colQtdAdquirida.ReadOnly = true;
+            // 
+            // colPrecoUnitario
+            // 
+            this.colPrecoUnitario.HeaderText = "Preço Unitário";
+            this.colPrecoUnitario.MinimumWidth = 6;
+            this.colPrecoUnitario.Name = "colPrecoUnitario";
+            this.colPrecoUnitario.ReadOnly = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nomeCompra,
+            this.DTACriacao,
+            this.CriadaPor});
+            this.dataGridView1.Location = new System.Drawing.Point(9, 88);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridView1.RowTemplate.Height = 50;
+            this.dataGridView1.Size = new System.Drawing.Size(446, 447);
+            this.dataGridView1.TabIndex = 6;
+            // 
+            // nomeCompra
+            // 
+            this.nomeCompra.HeaderText = "Nome Compra";
+            this.nomeCompra.MinimumWidth = 6;
+            this.nomeCompra.Name = "nomeCompra";
+            this.nomeCompra.ReadOnly = true;
+            // 
+            // DTACriacao
+            // 
+            this.DTACriacao.HeaderText = "Data de Criação";
+            this.DTACriacao.MinimumWidth = 6;
+            this.DTACriacao.Name = "DTACriacao";
+            this.DTACriacao.ReadOnly = true;
+            // 
+            // CriadaPor
+            // 
+            this.CriadaPor.HeaderText = "Criada por:";
+            this.CriadaPor.MinimumWidth = 6;
+            this.CriadaPor.Name = "CriadaPor";
+            this.CriadaPor.ReadOnly = true;
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1196, 588);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.labelDetalhesCompra);
+            this.Controls.Add(this.labelComprasAberto);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Principal";
             this.Text = "Principal";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -232,13 +333,21 @@
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem planeamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estatísticaToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome_Compra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Data_Criacao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Criada_por;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem exportarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paraPDFToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paraCsvToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label labelComprasAberto;
+        private System.Windows.Forms.Label labelDetalhesCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTipoArtigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colArtigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colQtdPrevista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colQtdAdquirida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecoUnitario;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DTACriacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CriadaPor;
     }
 }

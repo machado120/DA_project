@@ -17,6 +17,18 @@ namespace WindowsFormsApp1.Views
             InitializeComponent();
         }
 
-        
+        private void paraCsvToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.FileName = "Document"; // Default file name
+            dlg.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"; // Default file  extensions
+            dlg.FilterIndex = 1; // Default filter index
+                                 // Show save file dialog box e process save file dialog box results
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                // Save document
+                string filename = dlg.FileName;
+            }
+        }
     }
 }

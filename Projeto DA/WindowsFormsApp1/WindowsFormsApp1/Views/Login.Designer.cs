@@ -32,7 +32,9 @@
             this.labelPassword = new System.Windows.Forms.Label();
             this.textUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonEntrar = new System.Windows.Forms.Button();
+            this.btnRecoverPwd = new System.Windows.Forms.Button();
+            this.buttonCriarNovoUtilizador = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LabelUsername
@@ -57,7 +59,7 @@
             // 
             // textUsername
             // 
-            this.textUsername.Location = new System.Drawing.Point(177, 59);
+            this.textUsername.Location = new System.Drawing.Point(177, 60);
             this.textUsername.Name = "textUsername";
             this.textUsername.Size = new System.Drawing.Size(138, 22);
             this.textUsername.TabIndex = 2;
@@ -71,21 +73,45 @@
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
-            // button1
+            // buttonEntrar
             // 
-            this.button1.Location = new System.Drawing.Point(207, 130);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 28);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Entrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonEntrar.Location = new System.Drawing.Point(207, 130);
+            this.buttonEntrar.Name = "buttonEntrar";
+            this.buttonEntrar.Size = new System.Drawing.Size(108, 28);
+            this.buttonEntrar.TabIndex = 4;
+            this.buttonEntrar.Text = "Entrar";
+            this.buttonEntrar.UseVisualStyleBackColor = true;
+            // 
+            // btnRecoverPwd
+            // 
+            this.btnRecoverPwd.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnRecoverPwd.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnRecoverPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecoverPwd.Location = new System.Drawing.Point(108, 210);
+            this.btnRecoverPwd.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRecoverPwd.Name = "btnRecoverPwd";
+            this.btnRecoverPwd.Size = new System.Drawing.Size(207, 25);
+            this.btnRecoverPwd.TabIndex = 5;
+            this.btnRecoverPwd.Text = "Recuperar Palavra-Passe";
+            this.btnRecoverPwd.UseVisualStyleBackColor = false;
+            // 
+            // buttonCriarNovoUtilizador
+            // 
+            this.buttonCriarNovoUtilizador.Location = new System.Drawing.Point(207, 164);
+            this.buttonCriarNovoUtilizador.Name = "buttonCriarNovoUtilizador";
+            this.buttonCriarNovoUtilizador.Size = new System.Drawing.Size(108, 28);
+            this.buttonCriarNovoUtilizador.TabIndex = 6;
+            this.buttonCriarNovoUtilizador.Text = "Criar utilizador";
+            this.buttonCriarNovoUtilizador.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(376, 238);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(369, 302);
+            this.Controls.Add(this.buttonCriarNovoUtilizador);
+            this.Controls.Add(this.btnRecoverPwd);
+            this.Controls.Add(this.buttonEntrar);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.textUsername);
             this.Controls.Add(this.labelPassword);
@@ -103,6 +129,8 @@
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.TextBox textUsername;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonEntrar;
+        private System.Windows.Forms.Button btnRecoverPwd;
+        private System.Windows.Forms.Button buttonCriarNovoUtilizador;
     }
 }

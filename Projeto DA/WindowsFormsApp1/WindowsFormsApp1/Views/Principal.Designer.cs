@@ -44,12 +44,16 @@
             this.Data_Criacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Criada_por = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
+            this.exportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paraPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paraCsvToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ficheiroToolStripMenuItem,
@@ -57,13 +61,14 @@
             this.comprasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // ficheiroToolStripMenuItem
             // 
             this.ficheiroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportarToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.ficheiroToolStripMenuItem.Name = "ficheiroToolStripMenuItem";
             this.ficheiroToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
@@ -72,7 +77,7 @@
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(117, 26);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
             // gestaoToolStripMenuItem
@@ -83,7 +88,7 @@
             this.artigosToolStripMenuItem,
             this.orçamentosToolStripMenuItem});
             this.gestaoToolStripMenuItem.Name = "gestaoToolStripMenuItem";
-            this.gestaoToolStripMenuItem.Size = new System.Drawing.Size(69, 26);
+            this.gestaoToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
             this.gestaoToolStripMenuItem.Text = "Gestao";
             // 
             // utilizadoresToolStripMenuItem
@@ -116,7 +121,7 @@
             this.planeamentoToolStripMenuItem,
             this.estatísticaToolStripMenuItem});
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(82, 26);
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.comprasToolStripMenuItem.Text = "Compras";
             // 
             // planeamentoToolStripMenuItem
@@ -175,6 +180,27 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // exportarToolStripMenuItem
+            // 
+            this.exportarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.paraPDFToolStripMenuItem,
+            this.paraCsvToolStripMenuItem});
+            this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
+            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exportarToolStripMenuItem.Text = "Exportar";
+            // 
+            // paraPDFToolStripMenuItem
+            // 
+            this.paraPDFToolStripMenuItem.Name = "paraPDFToolStripMenuItem";
+            this.paraPDFToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.paraPDFToolStripMenuItem.Text = "Para PDF";
+            // 
+            // paraCsvToolStripMenuItem
+            // 
+            this.paraCsvToolStripMenuItem.Name = "paraCsvToolStripMenuItem";
+            this.paraCsvToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.paraCsvToolStripMenuItem.Text = "Para csv.";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -211,5 +237,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Data_Criacao;
         private System.Windows.Forms.DataGridViewTextBoxColumn Criada_por;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem exportarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem paraPDFToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem paraCsvToolStripMenuItem;
     }
 }

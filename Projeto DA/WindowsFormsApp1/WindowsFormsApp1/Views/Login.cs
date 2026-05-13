@@ -17,6 +17,14 @@ namespace WindowsFormsApp1.Views
             InitializeComponent();
         }
 
-        
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonEntrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

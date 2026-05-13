@@ -16,6 +16,7 @@ namespace WindowsFormsApp1.Views
         {
             InitializeComponent();
         }
+<<<<<<< Updated upstream
 
         private void Login_Load(object sender, EventArgs e)
         {
@@ -26,5 +27,7 @@ namespace WindowsFormsApp1.Views
         {
 
         }
+=======
+>>>>>>> Stashed changes
     }
 }

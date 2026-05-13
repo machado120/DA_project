@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.Models
 {
-    internal class Item
+    public class Item
     {
 
         [Key]

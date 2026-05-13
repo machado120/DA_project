@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.Models
 {
-    internal class Tipo_de_Artigos
+    public class Tipo_de_Artigos
     {
         public int Id { get; set; }
         public string descricao { get; set; }

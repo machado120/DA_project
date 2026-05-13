@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.Models
 {
-    internal class Compras
+    public class Compras
     {
         // Chave Primária e Auto-incremento
         [Key]

@@ -93,7 +93,7 @@
             // 
             // btnRecoverPwd
             // 
-            this.btnRecoverPwd.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnRecoverPwd.BackColor = System.Drawing.Color.DarkGray;
             this.btnRecoverPwd.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnRecoverPwd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecoverPwd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -112,7 +112,7 @@
             this.buttonCriarNovoUtilizador.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.buttonCriarNovoUtilizador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCriarNovoUtilizador.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCriarNovoUtilizador.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonCriarNovoUtilizador.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonCriarNovoUtilizador.Location = new System.Drawing.Point(174, 177);
             this.buttonCriarNovoUtilizador.Name = "buttonCriarNovoUtilizador";
             this.buttonCriarNovoUtilizador.Size = new System.Drawing.Size(175, 31);

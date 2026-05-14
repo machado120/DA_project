@@ -78,8 +78,7 @@
             // buttonEntrar
             // 
             this.buttonEntrar.BackColor = System.Drawing.Color.LimeGreen;
-            this.buttonEntrar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonEntrar.FlatAppearance.BorderSize = 0;
+            this.buttonEntrar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.buttonEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEntrar.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEntrar.ForeColor = System.Drawing.Color.White;
@@ -95,8 +94,7 @@
             // btnRecoverPwd
             // 
             this.btnRecoverPwd.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btnRecoverPwd.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnRecoverPwd.FlatAppearance.BorderSize = 0;
+            this.btnRecoverPwd.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnRecoverPwd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecoverPwd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecoverPwd.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -110,9 +108,8 @@
             // 
             // buttonCriarNovoUtilizador
             // 
-            this.buttonCriarNovoUtilizador.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonCriarNovoUtilizador.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonCriarNovoUtilizador.FlatAppearance.BorderSize = 0;
+            this.buttonCriarNovoUtilizador.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonCriarNovoUtilizador.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.buttonCriarNovoUtilizador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCriarNovoUtilizador.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCriarNovoUtilizador.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -151,7 +148,6 @@
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.LabelUsername);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

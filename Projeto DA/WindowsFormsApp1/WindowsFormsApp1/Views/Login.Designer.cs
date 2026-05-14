@@ -77,12 +77,12 @@
             // 
             // buttonEntrar
             // 
-            this.buttonEntrar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.buttonEntrar.BackColor = System.Drawing.Color.LimeGreen;
             this.buttonEntrar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.buttonEntrar.FlatAppearance.BorderSize = 0;
             this.buttonEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEntrar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEntrar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonEntrar.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEntrar.ForeColor = System.Drawing.Color.White;
             this.buttonEntrar.Location = new System.Drawing.Point(174, 132);
             this.buttonEntrar.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEntrar.Name = "buttonEntrar";
@@ -139,8 +139,7 @@
             // Login
             // 
             this.AcceptButton = this.buttonEntrar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(403, 280);
             this.Controls.Add(this.pictureBox1);
@@ -152,6 +151,7 @@
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.LabelUsername);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

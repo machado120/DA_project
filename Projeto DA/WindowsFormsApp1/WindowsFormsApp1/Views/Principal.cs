@@ -12,9 +12,10 @@ namespace WindowsFormsApp1.Views
 {
     public partial class Principal : Form
     {
-        public Principal()
+        public Principal(string username)
         {
             InitializeComponent();
+            UtilizadorLogado.Text = "Utilizador Logado: " + username; // Exibe o nome do utilizador logado
         }
 
         private void paraCsvToolStripMenuItem_Click(object sender, EventArgs e)

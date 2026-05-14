@@ -29,7 +29,15 @@ namespace WindowsFormsApp1.Views
 
         private void buttonEntrar_Click(object sender, EventArgs e)
         {
+           
+            // 1. Aqui, mais tarde, vais usar o teu LoginController para verificar 
+            // se o textUsername.Text e a txtPassword.Text estão corretos na Base de Dados.
 
+            // 2. Assumindo que o login teve sucesso, abrimos o form Principal:
+            Principal janelaPrincipal = new Principal(textUsername.Text);
+            janelaPrincipal.Show();
+            this.Hide(); // Esconde a janela de login
+        
         }
 
         private void buttonCriarNovoUtilizador_Click(object sender, EventArgs e)

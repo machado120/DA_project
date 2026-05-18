@@ -74,6 +74,12 @@
     <Compile Include="Models\Utilizadores.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Estatística.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Estatística.Designer.cs">
+      <DependentUpon>Estatística.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Gestao_Artigos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,12 @@
     <Compile Include="Views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NovaCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NovaCompra.Designer.cs">
+      <DependentUpon>NovaCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,8 +129,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\Gestao_Artigos.resx">
+      <DependentUpon>Gestao_Artigos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Gestao_Tipo_Artigos.resx">
+      <DependentUpon>Gestao_Tipo_Artigos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NovaCompra.resx">
+      <DependentUpon>NovaCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

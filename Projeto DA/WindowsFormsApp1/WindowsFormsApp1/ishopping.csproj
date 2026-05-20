@@ -104,6 +104,12 @@
     <Compile Include="Views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ModoCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ModoCompra.Designer.cs">
+      <DependentUpon>ModoCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\NovaCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,11 +138,17 @@
     <EmbeddedResource Include="Views\Gestao_Artigos.resx">
       <DependentUpon>Gestao_Artigos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Gestao_Orcamentos.resx">
+      <DependentUpon>Gestao_Orcamentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Gestao_Tipo_Artigos.resx">
       <DependentUpon>Gestao_Tipo_Artigos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ModoCompra.resx">
+      <DependentUpon>ModoCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NovaCompra.resx">
       <DependentUpon>NovaCompra.cs</DependentUpon>

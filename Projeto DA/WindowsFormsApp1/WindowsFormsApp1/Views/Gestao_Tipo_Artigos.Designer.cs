@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labelDetalhes = new System.Windows.Forms.Label();
-            this.textBoxDetalhesArtigos = new System.Windows.Forms.TextBox();
-            this.buttonCriarArt = new System.Windows.Forms.Button();
-            this.buttonApagarArt = new System.Windows.Forms.Button();
-            this.buttonEditarArt = new System.Windows.Forms.Button();
             this.IDTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descrição_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.buttonEditarArt = new System.Windows.Forms.Button();
+            this.buttonApagarArt = new System.Windows.Forms.Button();
+            this.buttonCriarArt = new System.Windows.Forms.Button();
+            this.textBoxDetalhesArtigos = new System.Windows.Forms.TextBox();
+            this.labelDetalhes = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +49,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDTipo,
             this.Descrição_Nome});
+            this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dataGridView1.Location = new System.Drawing.Point(24, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -56,8 +57,22 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(378, 395);
+            this.dataGridView1.Size = new System.Drawing.Size(378, 555);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // IDTipo
+            // 
+            this.IDTipo.HeaderText = "IDTipo";
+            this.IDTipo.MinimumWidth = 6;
+            this.IDTipo.Name = "IDTipo";
+            this.IDTipo.ReadOnly = true;
+            // 
+            // Descrição_Nome
+            // 
+            this.Descrição_Nome.HeaderText = "Descrição/Nome";
+            this.Descrição_Nome.MinimumWidth = 6;
+            this.Descrição_Nome.Name = "Descrição_Nome";
+            this.Descrição_Nome.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -75,35 +90,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalhes do Tipo de Artigo";
             // 
-            // labelDetalhes
+            // button1
             // 
-            this.labelDetalhes.AutoSize = true;
-            this.labelDetalhes.Location = new System.Drawing.Point(6, 28);
-            this.labelDetalhes.Name = "labelDetalhes";
-            this.labelDetalhes.Size = new System.Drawing.Size(113, 20);
-            this.labelDetalhes.TabIndex = 0;
-            this.labelDetalhes.Text = "Nome do tipo:";
+            this.button1.BackColor = System.Drawing.Color.Gainsboro;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(280, 107);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 31);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Limpar";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // textBoxDetalhesArtigos
+            // buttonEditarArt
             // 
-            this.textBoxDetalhesArtigos.Location = new System.Drawing.Point(143, 25);
-            this.textBoxDetalhesArtigos.Name = "textBoxDetalhesArtigos";
-            this.textBoxDetalhesArtigos.Size = new System.Drawing.Size(241, 27);
-            this.textBoxDetalhesArtigos.TabIndex = 1;
-            // 
-            // buttonCriarArt
-            // 
-            this.buttonCriarArt.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.buttonCriarArt.FlatAppearance.BorderSize = 0;
-            this.buttonCriarArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCriarArt.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCriarArt.ForeColor = System.Drawing.Color.White;
-            this.buttonCriarArt.Location = new System.Drawing.Point(33, 70);
-            this.buttonCriarArt.Name = "buttonCriarArt";
-            this.buttonCriarArt.Size = new System.Drawing.Size(104, 31);
-            this.buttonCriarArt.TabIndex = 2;
-            this.buttonCriarArt.Text = "Criar ";
-            this.buttonCriarArt.UseVisualStyleBackColor = false;
+            this.buttonEditarArt.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonEditarArt.FlatAppearance.BorderSize = 0;
+            this.buttonEditarArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditarArt.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditarArt.ForeColor = System.Drawing.Color.White;
+            this.buttonEditarArt.Location = new System.Drawing.Point(170, 70);
+            this.buttonEditarArt.Name = "buttonEditarArt";
+            this.buttonEditarArt.Size = new System.Drawing.Size(104, 31);
+            this.buttonEditarArt.TabIndex = 4;
+            this.buttonEditarArt.Text = "Editar";
+            this.buttonEditarArt.UseVisualStyleBackColor = false;
             // 
             // buttonApagarArt
             // 
@@ -120,51 +133,41 @@
             this.buttonApagarArt.Text = "Eliminar";
             this.buttonApagarArt.UseVisualStyleBackColor = false;
             // 
-            // buttonEditarArt
+            // buttonCriarArt
             // 
-            this.buttonEditarArt.BackColor = System.Drawing.Color.SteelBlue;
-            this.buttonEditarArt.FlatAppearance.BorderSize = 0;
-            this.buttonEditarArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEditarArt.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEditarArt.ForeColor = System.Drawing.Color.Black;
-            this.buttonEditarArt.Location = new System.Drawing.Point(160, 70);
-            this.buttonEditarArt.Name = "buttonEditarArt";
-            this.buttonEditarArt.Size = new System.Drawing.Size(104, 31);
-            this.buttonEditarArt.TabIndex = 4;
-            this.buttonEditarArt.Text = "Editar";
-            this.buttonEditarArt.UseVisualStyleBackColor = false;
+            this.buttonCriarArt.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.buttonCriarArt.FlatAppearance.BorderSize = 0;
+            this.buttonCriarArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCriarArt.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCriarArt.ForeColor = System.Drawing.Color.White;
+            this.buttonCriarArt.Location = new System.Drawing.Point(60, 70);
+            this.buttonCriarArt.Name = "buttonCriarArt";
+            this.buttonCriarArt.Size = new System.Drawing.Size(104, 31);
+            this.buttonCriarArt.TabIndex = 2;
+            this.buttonCriarArt.Text = "Criar ";
+            this.buttonCriarArt.UseVisualStyleBackColor = false;
             // 
-            // IDTipo
+            // textBoxDetalhesArtigos
             // 
-            this.IDTipo.HeaderText = "IDTipo";
-            this.IDTipo.MinimumWidth = 6;
-            this.IDTipo.Name = "IDTipo";
+            this.textBoxDetalhesArtigos.Location = new System.Drawing.Point(143, 25);
+            this.textBoxDetalhesArtigos.Name = "textBoxDetalhesArtigos";
+            this.textBoxDetalhesArtigos.Size = new System.Drawing.Size(241, 27);
+            this.textBoxDetalhesArtigos.TabIndex = 1;
             // 
-            // Descrição_Nome
+            // labelDetalhes
             // 
-            this.Descrição_Nome.HeaderText = "Descrição/Nome";
-            this.Descrição_Nome.MinimumWidth = 6;
-            this.Descrição_Nome.Name = "Descrição_Nome";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Gainsboro;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(280, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 31);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Limpar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.labelDetalhes.AutoSize = true;
+            this.labelDetalhes.Location = new System.Drawing.Point(6, 28);
+            this.labelDetalhes.Name = "labelDetalhes";
+            this.labelDetalhes.Size = new System.Drawing.Size(113, 20);
+            this.labelDetalhes.TabIndex = 0;
+            this.labelDetalhes.Text = "Nome do tipo:";
             // 
             // Gestao_de_Tipo_de_Artigos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(835, 512);
+            this.ClientSize = new System.Drawing.Size(835, 626);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Gestao_de_Tipo_de_Artigos";

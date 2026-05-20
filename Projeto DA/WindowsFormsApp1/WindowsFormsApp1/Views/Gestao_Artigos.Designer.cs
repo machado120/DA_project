@@ -31,18 +31,17 @@
             this.labelTipodeArtigo = new System.Windows.Forms.Label();
             this.comboBoxTipoArtigo = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.IDArtigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeArtigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoArtigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textNomeArtig = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonEditarArt = new System.Windows.Forms.Button();
             this.buttonApagarArt = new System.Windows.Forms.Button();
             this.buttonCriarArt = new System.Windows.Forms.Button();
+            this.textNomeArtig = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxFiltrar = new System.Windows.Forms.ComboBox();
+            this.NomeArtigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoArtigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +68,6 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDArtigo,
             this.NomeArtigo,
             this.TipoArtigo});
             this.dataGridView1.Location = new System.Drawing.Point(33, 79);
@@ -78,28 +76,8 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(393, 338);
+            this.dataGridView1.Size = new System.Drawing.Size(426, 338);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // IDArtigo
-            // 
-            this.IDArtigo.HeaderText = "IDArtigo";
-            this.IDArtigo.MinimumWidth = 6;
-            this.IDArtigo.Name = "IDArtigo";
-            // 
-            // NomeArtigo
-            // 
-            this.NomeArtigo.HeaderText = "Nome do Artigo";
-            this.NomeArtigo.MinimumWidth = 6;
-            this.NomeArtigo.Name = "NomeArtigo";
-            this.NomeArtigo.ReadOnly = true;
-            // 
-            // TipoArtigo
-            // 
-            this.TipoArtigo.HeaderText = "Tipo de Artigo";
-            this.TipoArtigo.MinimumWidth = 6;
-            this.TipoArtigo.Name = "TipoArtigo";
-            this.TipoArtigo.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -111,28 +89,12 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.labelTipodeArtigo);
             this.groupBox1.Controls.Add(this.comboBoxTipoArtigo);
-            this.groupBox1.Location = new System.Drawing.Point(453, 48);
+            this.groupBox1.Location = new System.Drawing.Point(480, 48);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(370, 369);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalhes do Artigo";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nome do Artigo:";
-            // 
-            // textNomeArtig
-            // 
-            this.textNomeArtig.Location = new System.Drawing.Point(113, 74);
-            this.textNomeArtig.Name = "textNomeArtig";
-            this.textNomeArtig.Size = new System.Drawing.Size(241, 22);
-            this.textNomeArtig.TabIndex = 3;
             // 
             // button1
             // 
@@ -191,6 +153,22 @@
             this.buttonCriarArt.Text = "Criar ";
             this.buttonCriarArt.UseVisualStyleBackColor = false;
             // 
+            // textNomeArtig
+            // 
+            this.textNomeArtig.Location = new System.Drawing.Point(113, 74);
+            this.textNomeArtig.Name = "textNomeArtig";
+            this.textNomeArtig.Size = new System.Drawing.Size(241, 22);
+            this.textNomeArtig.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nome do Artigo:";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -205,8 +183,22 @@
             this.comboBoxFiltrar.FormattingEnabled = true;
             this.comboBoxFiltrar.Location = new System.Drawing.Point(138, 48);
             this.comboBoxFiltrar.Name = "comboBoxFiltrar";
-            this.comboBoxFiltrar.Size = new System.Drawing.Size(288, 24);
+            this.comboBoxFiltrar.Size = new System.Drawing.Size(321, 24);
             this.comboBoxFiltrar.TabIndex = 11;
+            // 
+            // NomeArtigo
+            // 
+            this.NomeArtigo.HeaderText = "Nome do Artigo";
+            this.NomeArtigo.MinimumWidth = 6;
+            this.NomeArtigo.Name = "NomeArtigo";
+            this.NomeArtigo.ReadOnly = true;
+            // 
+            // TipoArtigo
+            // 
+            this.TipoArtigo.HeaderText = "Tipo de Artigo";
+            this.TipoArtigo.MinimumWidth = 6;
+            this.TipoArtigo.Name = "TipoArtigo";
+            this.TipoArtigo.ReadOnly = true;
             // 
             // Gestao_de_Artigos
             // 
@@ -232,9 +224,6 @@
         private System.Windows.Forms.Label labelTipodeArtigo;
         private System.Windows.Forms.ComboBox comboBoxTipoArtigo;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDArtigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomeArtigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoArtigo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textNomeArtig;
         private System.Windows.Forms.Label label2;
@@ -244,5 +233,7 @@
         private System.Windows.Forms.Button buttonCriarArt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxFiltrar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeArtigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoArtigo;
     }
 }

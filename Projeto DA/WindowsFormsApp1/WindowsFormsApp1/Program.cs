@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
             Database.SetInitializer(new AppDbInitializer());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new Gestao_de_Tipo_de_Artigos());
         }
     }
 }

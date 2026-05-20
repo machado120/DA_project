@@ -112,6 +112,7 @@
             this.buttonCriarArt.TabIndex = 2;
             this.buttonCriarArt.Text = "Criar ";
             this.buttonCriarArt.UseVisualStyleBackColor = false;
+            this.buttonCriarArt.Click += new System.EventHandler(this.buttonCriarArt_Click);
             // 
             // textBoxDetalhesArtigos
             // 
@@ -159,6 +160,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Gestao_de_Tipo_de_Artigos";
             this.Text = "Gestão de Tipos de Artigos";
+            this.Load += new System.EventHandler(this.Gestao_de_Tipo_de_Artigos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

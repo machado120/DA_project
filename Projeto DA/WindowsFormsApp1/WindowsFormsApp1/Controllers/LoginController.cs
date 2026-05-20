@@ -13,21 +13,32 @@ namespace WindowsFormsApp1.Controllers
     {
         public void AdicionarCliente(string nome, string password)
         {
-            // do the comparision to check if there is alr a user with thisname on the dataset
-
             using (Context context = new Context())
             {
-                //criacao do objeto cliente
+                // 1. Procurar na base de dados se já existe alguém com este nome
+                var utilizadorExiste = context.Utilizadores.FirstOrDefault(u => u.Nome == nome);
+
+                // 2. Se o utilizadorExiste NÃO for null, significa que já há um na base de dados
+                if (utilizadorExiste != null)
+                {
+                    // Lançamos um erro. O teu bloco 'catch (InvalidOperationException ex)' 
+                    // no Login.cs vai apanhar isto e mostrar a mensagem numa MessageBox!
+                    throw new InvalidOperationException("Já existe um utilizador com esse nome!");
+                }
+
+                // 3. Se passou pela verificação (não existe), cria e guarda o novo cliente
                 Utilizadores cliente = new Utilizadores();
                 cliente.Nome = nome;
                 cliente.password = password;
 
                 context.Utilizadores.Add(cliente);
                 context.SaveChanges();
-                MessageBox.Show("susesso");
+                
             }
-
         }
+
+    
+
 
         public string VerificarPass(string nome, string password)
         {

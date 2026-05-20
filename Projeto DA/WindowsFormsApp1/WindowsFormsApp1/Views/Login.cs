@@ -81,13 +81,7 @@ namespace WindowsFormsApp1.Views
                 {
                     MessageBox.Show(ex.Message);//mostra a mensagem de erro caso haja um erro
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao criar cliente!");//mostra a mensagem de erro caso haja um erro
-                }
             }
         }
-
-
     }
 }

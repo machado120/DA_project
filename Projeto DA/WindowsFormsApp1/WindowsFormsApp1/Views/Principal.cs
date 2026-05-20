@@ -31,5 +31,15 @@ namespace WindowsFormsApp1.Views
                 string filename = dlg.FileName;
             }
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

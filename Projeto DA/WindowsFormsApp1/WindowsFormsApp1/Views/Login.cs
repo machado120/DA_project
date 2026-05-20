@@ -20,6 +20,7 @@ namespace WindowsFormsApp1.Views
         public Login()
         {
             InitializeComponent();
+            LoginController controller = new LoginController();
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -29,32 +30,61 @@ namespace WindowsFormsApp1.Views
 
         private void buttonEntrar_Click(object sender, EventArgs e)
         {
-           
-            // 1. Aqui, mais tarde, vais usar o teu LoginController para verificar 
-            // se o textUsername.Text e a txtPassword.Text estão corretos na Base de Dados.
+            // Validações iniciais
+            if (string.IsNullOrWhiteSpace(textUsername.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                MessageBox.Show("Os campos não podem estar vazios");
+            }
+            else
+            {
+                LoginController controller = new LoginController();
 
-            // 2. Assumindo que o login teve sucesso, abrimos o form Principal:
-            Principal janelaPrincipal = new Principal(textUsername.Text);
-            janelaPrincipal.Show();
-            this.Hide(); // Esconde a janela de login
-        
+                // Cria uma variável para guardar a resposta em vez de usar o Text da janela
+                string resultado = controller.VerificarPass(textUsername.Text, txtPassword.Text);
+
+                // Se correu bem, não precisas de mostrar MessageBox, a janela Principal já vai abrir.
+                if (resultado == "Sucesso")
+                {
+                    // 1. Abre a janela Principal
+                    Principal janelaPrincipal = new Principal(textUsername.Text);
+                    janelaPrincipal.Show();
+
+                    // 2. Garante que, quando o utilizador fechar a janela Principal, a aplicação fecha por completo
+                    janelaPrincipal.FormClosed += (s, args) => this.Close();
+
+                    // 3. Esconde a janela de Login
+                    this.Hide();
+                }
+                else
+                {
+                    // Só mostras a mensagem se houver erro (Password incorreta ou Não encontrado)
+                    MessageBox.Show(resultado);
+                }
+            }
         }
 
         private void buttonCriarNovoUtilizador_Click(object sender, EventArgs e)
         {
             LoginController controller = new LoginController(); //instancia do controller para chamar o metodo adicionar cliente
-            try
+            if (string.IsNullOrWhiteSpace(textUsername.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
             {
-                controller.AdicionarCliente(textUsername.Text, txtPassword.Text);//chama o metodo adicionar cliente do controller para adicionar um cliente a base de dados
+                MessageBox.Show("Os campos não podem estar vazios");
+            }
+            else
+            {
+                try
+                {
+                    controller.AdicionarCliente(textUsername.Text, txtPassword.Text);//chama o metodo adicionar cliente do controller para adicionar um cliente a base de dados
 
-            }
-            catch (InvalidOperationException ex)
-            {
-                MessageBox.Show(ex.Message);//mostra a mensagem de erro caso haja um erro
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao criar cliente!");//mostra a mensagem de erro caso haja um erro
+                }
+                catch (InvalidOperationException ex)
+                {
+                    MessageBox.Show(ex.Message);//mostra a mensagem de erro caso haja um erro
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao criar cliente!");//mostra a mensagem de erro caso haja um erro
+                }
             }
         }
 

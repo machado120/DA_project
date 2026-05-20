@@ -244,7 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 649);
+            this.ClientSize = new System.Drawing.Size(1041, 696);
             this.Controls.Add(this.buttonRemoverCompra);
             this.Controls.Add(this.buttonCancelarCompra);
             this.Controls.Add(this.buttonCriarCompra);

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.Controllers;
+using WindowsFormsApp1.Models;
 
 namespace WindowsFormsApp1.Views
 {
@@ -45,6 +46,45 @@ namespace WindowsFormsApp1.Views
             listBoxTipos.DataSource = null;
 
             listBoxTipos.DataSource = controller.Get_tipo_de_Artigos();
+        }
+
+        private void buttonEditarArt_Click(object sender, EventArgs e)
+        {
+            if (listBoxTipos.SelectedIndex == -1)
+            {
+                return;
+            }
+            Tipo_de_Artigos artig = listBoxTipos.SelectedItem as Tipo_de_Artigos;
+            artig.descricao = textBoxDetalhesArtigos.Text;
+            controller.editar_Tipoartigo(artig);
+
+
+            atualiza_text();
+        }
+
+        private void listBoxTipos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxTipos.SelectedIndex == -1)
+            {
+                return;
+            }
+            
+            Tipo_de_Artigos artig = listBoxTipos.SelectedItem as Tipo_de_Artigos;
+            textBoxDetalhesArtigos.Text = artig.descricao;
+        }
+
+        private void buttonApagarArt_Click(object sender, EventArgs e)
+        {
+            if (listBoxTipos.SelectedIndex == -1)
+            {
+                return;
+            }
+            Tipo_de_Artigos artig = listBoxTipos.SelectedItem as Tipo_de_Artigos;
+            artig.descricao = textBoxDetalhesArtigos.Text;
+            controller.eliminar_Tipoartigo(artig);
+
+
+            atualiza_text();
         }
     }
 }

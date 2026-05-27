@@ -67,6 +67,7 @@
             this.buttonEditarArt.TabIndex = 4;
             this.buttonEditarArt.Text = "Editar";
             this.buttonEditarArt.UseVisualStyleBackColor = false;
+            this.buttonEditarArt.Click += new System.EventHandler(this.buttonEditarArt_Click);
             // 
             // buttonApagarArt
             // 
@@ -82,6 +83,7 @@
             this.buttonApagarArt.TabIndex = 3;
             this.buttonApagarArt.Text = "Eliminar";
             this.buttonApagarArt.UseVisualStyleBackColor = false;
+            this.buttonApagarArt.Click += new System.EventHandler(this.buttonApagarArt_Click);
             // 
             // buttonCriarArt
             // 
@@ -124,6 +126,7 @@
             this.listBoxTipos.Name = "listBoxTipos";
             this.listBoxTipos.Size = new System.Drawing.Size(357, 508);
             this.listBoxTipos.TabIndex = 2;
+            this.listBoxTipos.SelectedIndexChanged += new System.EventHandler(this.listBoxTipos_SelectedIndexChanged);
             // 
             // label1
             // 

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using WindowsFormsApp1.Models;
 
 namespace WindowsFormsApp1.Controllers
@@ -22,7 +24,8 @@ namespace WindowsFormsApp1.Controllers
                 {
                     // Lançamos um erro. O teu bloco 'catch (InvalidOperationException ex)' 
                     // no Login.cs vai apanhar isto e mostrar a mensagem numa MessageBox!
-                    throw new InvalidOperationException("Já existe um tipo de artigo com esse nome!");
+                    MessageBox.Show("Já existe um tipo de artigo com esse nome!");
+                    return;
                 }
 
                 // 3. Se passou pela verificação (não existe), cria e guarda o novo cliente
@@ -42,5 +45,29 @@ namespace WindowsFormsApp1.Controllers
                 return context.Tipo_de_Artigos.ToList();// to list para obrigar a converter 
             }
         }
+
+        public void editar_Tipoartigo(Tipo_de_Artigos artig)
+        {
+
+            using (Context context = new Context())
+            {
+                context.Tipo_de_Artigos.AddOrUpdate(artig);
+                context.SaveChanges();
+
+            }
+        }
+
+        public void eliminar_Tipoartigo(Tipo_de_Artigos artig)
+        {
+            using (Context context = new Context())
+            {
+                context.Tipo_de_Artigos.Attach(artig);
+                context.Tipo_de_Artigos.Remove(artig);
+                context.SaveChanges();
+
+            }
+        }
+
+
     }
 }

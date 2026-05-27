@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.buttonEditarArt = new System.Windows.Forms.Button();
             this.buttonApagarArt = new System.Windows.Forms.Button();
             this.buttonCriarArt = new System.Windows.Forms.Button();
@@ -42,7 +41,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.buttonEditarArt);
             this.groupBox1.Controls.Add(this.buttonApagarArt);
             this.groupBox1.Controls.Add(this.buttonCriarArt);
@@ -55,20 +53,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalhes do Tipo de Artigo";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Gainsboro;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(280, 107);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 31);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Limpar";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // buttonEditarArt
             // 
@@ -175,7 +159,6 @@
         private System.Windows.Forms.Button buttonCriarArt;
         private System.Windows.Forms.TextBox textBoxDetalhesArtigos;
         private System.Windows.Forms.Label labelDetalhes;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBoxTipos;
         private System.Windows.Forms.Label label1;
     }

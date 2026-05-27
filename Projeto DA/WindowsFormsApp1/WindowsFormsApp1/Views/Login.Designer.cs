@@ -53,11 +53,11 @@
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(27, 88);
+            this.labelPassword.Location = new System.Drawing.Point(32, 86);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(77, 21);
+            this.labelPassword.Size = new System.Drawing.Size(82, 21);
             this.labelPassword.TabIndex = 1;
-            this.labelPassword.Text = "Password";
+            this.labelPassword.Text = "Password:";
             // 
             // textUsername
             // 

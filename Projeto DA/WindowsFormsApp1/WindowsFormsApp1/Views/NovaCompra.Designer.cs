@@ -31,6 +31,9 @@
             this.textBoxNomeCompra = new System.Windows.Forms.TextBox();
             this.labelNomeCompra = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonAddItem = new System.Windows.Forms.Button();
@@ -39,20 +42,17 @@
             this.comboBoxArtigoNovaCompra = new System.Windows.Forms.ComboBox();
             this.labelArtigoNovaCompra = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonCriarCompra = new System.Windows.Forms.Button();
-            this.buttonCancelarCompra = new System.Windows.Forms.Button();
-            this.buttonRemoverCompra = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.NomeArtigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoArt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonCriarCompra = new System.Windows.Forms.Button();
+            this.buttonCancelarCompra = new System.Windows.Forms.Button();
+            this.buttonRemoverCompra = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.labelTotalPrev = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -97,6 +97,34 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Adicionar Itens";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(455, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(18, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "€";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(241, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 23);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Preço Unitário:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(370, 85);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(81, 22);
+            this.textBox1.TabIndex = 8;
             // 
             // comboBox1
             // 
@@ -191,6 +219,44 @@
             this.dataGridView1.Size = new System.Drawing.Size(685, 408);
             this.dataGridView1.TabIndex = 3;
             // 
+            // NomeArtigo
+            // 
+            this.NomeArtigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NomeArtigo.HeaderText = "Nome Artigo";
+            this.NomeArtigo.MinimumWidth = 6;
+            this.NomeArtigo.Name = "NomeArtigo";
+            // 
+            // TipoArt
+            // 
+            this.TipoArt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TipoArt.HeaderText = "Tipo de Artigo";
+            this.TipoArt.MinimumWidth = 6;
+            this.TipoArt.Name = "TipoArt";
+            // 
+            // Quantidade
+            // 
+            this.Quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Quantidade.HeaderText = "Quantidade";
+            this.Quantidade.MinimumWidth = 6;
+            this.Quantidade.Name = "Quantidade";
+            this.Quantidade.Width = 106;
+            // 
+            // ValorUnit
+            // 
+            this.ValorUnit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ValorUnit.HeaderText = "Valor Unitário";
+            this.ValorUnit.MinimumWidth = 6;
+            this.ValorUnit.Name = "ValorUnit";
+            this.ValorUnit.Width = 117;
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.MinimumWidth = 6;
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.Width = 85;
+            // 
             // buttonCriarCompra
             // 
             this.buttonCriarCompra.BackColor = System.Drawing.Color.LimeGreen;
@@ -233,62 +299,6 @@
             this.buttonRemoverCompra.Text = "Remover Artigo";
             this.buttonRemoverCompra.UseVisualStyleBackColor = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(370, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(81, 22);
-            this.textBox1.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(241, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 23);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Preço Unitário:";
-            // 
-            // NomeArtigo
-            // 
-            this.NomeArtigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NomeArtigo.HeaderText = "Nome Artigo";
-            this.NomeArtigo.MinimumWidth = 6;
-            this.NomeArtigo.Name = "NomeArtigo";
-            // 
-            // TipoArt
-            // 
-            this.TipoArt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TipoArt.HeaderText = "Tipo de Artigo";
-            this.TipoArt.MinimumWidth = 6;
-            this.TipoArt.Name = "TipoArt";
-            // 
-            // Quantidade
-            // 
-            this.Quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Quantidade.HeaderText = "Quantidade";
-            this.Quantidade.MinimumWidth = 6;
-            this.Quantidade.Name = "Quantidade";
-            this.Quantidade.Width = 106;
-            // 
-            // ValorUnit
-            // 
-            this.ValorUnit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ValorUnit.HeaderText = "Valor Unitário";
-            this.ValorUnit.MinimumWidth = 6;
-            this.ValorUnit.Name = "ValorUnit";
-            this.ValorUnit.Width = 117;
-            // 
-            // Subtotal
-            // 
-            this.Subtotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.MinimumWidth = 6;
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.Width = 85;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -318,21 +328,11 @@
             this.labelTotalPrev.Size = new System.Drawing.Size(0, 20);
             this.labelTotalPrev.TabIndex = 10;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(455, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(18, 20);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "€";
-            // 
             // NovaCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1041, 705);
+            this.ClientSize = new System.Drawing.Size(755, 705);
             this.Controls.Add(this.labelTotalPrev);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);

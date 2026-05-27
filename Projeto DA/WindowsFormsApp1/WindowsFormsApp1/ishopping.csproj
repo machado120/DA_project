@@ -136,6 +136,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\Estatística.resx">
+      <DependentUpon>Estatística.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Gestao_Artigos.resx">
       <DependentUpon>Gestao_Artigos.cs</DependentUpon>
     </EmbeddedResource>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.LabelUsername = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.textUsername = new System.Windows.Forms.TextBox();
@@ -36,6 +37,7 @@
             this.btnRecoverPwd = new System.Windows.Forms.Button();
             this.buttonCriarNovoUtilizador = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,6 +135,12 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // Login
             // 
             this.AcceptButton = this.buttonEntrar;
@@ -169,5 +177,6 @@
         private System.Windows.Forms.Button btnRecoverPwd;
         private System.Windows.Forms.Button buttonCriarNovoUtilizador;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

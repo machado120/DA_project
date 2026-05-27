@@ -147,6 +147,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Gestao_de_Tipo_de_Artigos";
             this.Text = "Gestão de Tipos de Artigos";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Gestao_de_Tipo_de_Artigos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

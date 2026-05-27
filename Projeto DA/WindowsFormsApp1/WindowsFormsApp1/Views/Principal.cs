@@ -41,5 +41,34 @@ namespace WindowsFormsApp1.Views
         {
 
         }
+
+        private void tiposDeArtigosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Gestao_de_Tipo_de_Artigos form = new Gestao_de_Tipo_de_Artigos();
+            form.Show();
+            form.FormClosed += (s, args) => this.Close();
+            this.Hide();
+        }
+
+        private void utilizadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void artigosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Gestao_de_Artigos form = new Gestao_de_Artigos();
+            form.Show();
+            form.FormClosed += (s, args) => this.Close();
+            this.Hide();
+        }
+
+        private void orçamentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Gestao_de_Orcamentos form = new Gestao_de_Orcamentos();
+            form.Show();
+            form.FormClosed += (s, args) => this.Close();
+            this.Hide();
+        }
     }
 }

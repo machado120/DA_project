@@ -61,10 +61,15 @@ namespace WindowsFormsApp1.Controllers
         {
             using (Context context = new Context())
             {
+                var temArtigos = context.Artigos.Any(a => a.TipoArtigoId == artig.Id);
+                if (temArtigos)
+                {
+                    MessageBox.Show("Não é possível eliminar um tipo com artigos associados.");
+                    return;
+                }
                 context.Tipo_de_Artigos.Attach(artig);
                 context.Tipo_de_Artigos.Remove(artig);
                 context.SaveChanges();
-
             }
         }
         // Artigos

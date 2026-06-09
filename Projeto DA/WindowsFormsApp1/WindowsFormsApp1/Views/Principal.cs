@@ -32,6 +32,7 @@ namespace WindowsFormsApp1.Views
             planeamentoToolStripMenuItem.Click += planeamentoToolStripMenuItem_Click;
             estatísticaToolStripMenuItem.Click += estatísticaToolStripMenuItem_Click;
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
+            
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -174,5 +175,12 @@ namespace WindowsFormsApp1.Views
         {
             Close();
         }
-    }
+
+        private void terminarSessãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+           
+                Application.Restart();
+            }
+        }
 }

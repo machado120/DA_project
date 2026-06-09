@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,5 +33,10 @@ namespace WindowsFormsApp1.Models
         // The "?" after string means this field is Nullable (it can be left empty), 
         // matching the rule we defined for the database.
         public string Observacoes { get; set; }
+
+        [ForeignKey("ArtigoId")]
+        public virtual Artigos Artigos { get; set; } // Navigation property to access the related Artigo details
+        
+        
     }
 }

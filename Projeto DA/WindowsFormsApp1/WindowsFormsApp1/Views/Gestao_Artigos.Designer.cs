@@ -31,6 +31,8 @@
             this.labelTipodeArtigo = new System.Windows.Forms.Label();
             this.comboBoxTipoArtigo = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.NomeArtigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoArtigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonEditarArt = new System.Windows.Forms.Button();
@@ -40,8 +42,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxFiltrar = new System.Windows.Forms.ComboBox();
-            this.NomeArtigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoArtigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -78,6 +80,20 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(426, 338);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // NomeArtigo
+            // 
+            this.NomeArtigo.HeaderText = "Nome do Artigo";
+            this.NomeArtigo.MinimumWidth = 6;
+            this.NomeArtigo.Name = "NomeArtigo";
+            this.NomeArtigo.ReadOnly = true;
+            // 
+            // TipoArtigo
+            // 
+            this.TipoArtigo.HeaderText = "Tipo de Artigo";
+            this.TipoArtigo.MinimumWidth = 6;
+            this.TipoArtigo.Name = "TipoArtigo";
+            this.TipoArtigo.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -146,7 +162,7 @@
             this.buttonCriarArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCriarArt.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCriarArt.ForeColor = System.Drawing.Color.White;
-            this.buttonCriarArt.Location = new System.Drawing.Point(3, 129);
+            this.buttonCriarArt.Location = new System.Drawing.Point(6, 129);
             this.buttonCriarArt.Name = "buttonCriarArt";
             this.buttonCriarArt.Size = new System.Drawing.Size(104, 31);
             this.buttonCriarArt.TabIndex = 6;
@@ -186,20 +202,6 @@
             this.comboBoxFiltrar.Size = new System.Drawing.Size(321, 24);
             this.comboBoxFiltrar.TabIndex = 11;
             // 
-            // NomeArtigo
-            // 
-            this.NomeArtigo.HeaderText = "Nome do Artigo";
-            this.NomeArtigo.MinimumWidth = 6;
-            this.NomeArtigo.Name = "NomeArtigo";
-            this.NomeArtigo.ReadOnly = true;
-            // 
-            // TipoArtigo
-            // 
-            this.TipoArtigo.HeaderText = "Tipo de Artigo";
-            this.TipoArtigo.MinimumWidth = 6;
-            this.TipoArtigo.Name = "TipoArtigo";
-            this.TipoArtigo.ReadOnly = true;
-            // 
             // Gestao_de_Artigos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -211,6 +213,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Gestao_de_Artigos";
             this.Text = "Gestao de Artigos";
+            this.Load += new System.EventHandler(this.Gestao_de_Artigos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

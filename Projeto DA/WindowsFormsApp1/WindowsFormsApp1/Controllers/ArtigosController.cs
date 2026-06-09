@@ -67,7 +67,52 @@ namespace WindowsFormsApp1.Controllers
 
             }
         }
+        // Artigos
+        public List<Artigos> GetArtigos()
+        {
+            using (Context context = new Context())
+            {
+                return context.Artigos.Include("TipoArtigo").ToList();// to list para obrigar a converter 
+            }
+        }
+        public List<Artigos> GetArtigosPorTipo(int tipoId)
+        {
+            using (Context context = new Context())
+            {
+                return context.Artigos.Include("TipoArtigo").Where(a => a.TipoArtigoId == tipoId).ToList();
+            }
+        }
+        public void AddArtigo(string nome, int tipoId)
+        {
+            using (Context context = new Context())
+            {
+                var existe = context.Artigos.FirstOrDefault(a => a.Nome == nome && a.TipoArtigoId == tipoId);
+                if (existe != null)
+                {
+                    MessageBox.Show("Já existe um artigo com esse nome para este tipo!");
+                    return;
+                }
+                context.Artigos.Add(new Artigos { Nome = nome, TipoArtigoId = tipoId });
+                context.SaveChanges();
+            }
+        }
+        public void EditarArtigo(Artigos artigo)
+        {
+            using (Context context = new Context())
+            {
+                context.Artigos.AddOrUpdate(artigo);
+                context.SaveChanges();
+            }
+        }
+        public void EliminarArtigo(Artigos artigo)
+        {
+            using (Context context = new Context())
+            {
+                context.Artigos.Attach(artigo);
+                context.Artigos.Remove(artigo);
+                context.SaveChanges();
+            }
 
-
+        }
     }
 }

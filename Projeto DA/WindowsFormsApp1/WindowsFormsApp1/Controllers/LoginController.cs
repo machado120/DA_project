@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,14 +34,14 @@ namespace WindowsFormsApp1.Controllers
 
                 context.Utilizadores.Add(cliente);
                 context.SaveChanges();
-                
+
             }
         }
 
-    
 
 
-        public string VerificarPass(string nome, string password)
+
+        public Utilizadores VerificarPass(string nome, string password)
         {
 
             using (Context context = new Context())
@@ -51,19 +52,48 @@ namespace WindowsFormsApp1.Controllers
                 // Se o utilizador for null, significa que não existe na base de dados
                 if (utilizador == null)
                 {
-                    return "Utilizador não encontrado";
+                    return null;
                 }
                 // Se encontrou o utilizador, compara as passwords
                 if (utilizador.password == password)
                 {
 
-                    return "Sucesso";
+                    return utilizador;
                 }
                 else
                 {
-                    return "Password incorreta";
+                    return null;
                 }
+            }
+        }
+
+
+    public List<Utilizadores> GetUtilizadores() // Método para obter a lista de utilizadores
+        {
+            using (Context context = new Context())
+            {
+                return context.Utilizadores.ToList();
+            }
+        }
+
+        public void EditarUtilizador(Utilizadores u) // Método para editar um utilizador existente
+        {
+            using (Context context = new Context())
+            {
+                context.Utilizadores.AddOrUpdate(u);
+                context.SaveChanges();
+            }
+        }
+
+        public void EliminarUtilizador(Utilizadores u) // Método para eliminar um utilizador existente
+        {
+            using (Context context = new Context())
+            {
+                context.Utilizadores.Attach(u);
+                context.Utilizadores.Remove(u);
+                context.SaveChanges();
             }
         }
     }
 }
+

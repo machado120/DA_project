@@ -62,7 +62,7 @@
             // 
             this.textBoxNomeCompra.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxNomeCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxNomeCompra.Location = new System.Drawing.Point(186, 13);
+            this.textBoxNomeCompra.Location = new System.Drawing.Point(197, 13);
             this.textBoxNomeCompra.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxNomeCompra.Multiline = true;
             this.textBoxNomeCompra.Name = "textBoxNomeCompra";
@@ -93,7 +93,7 @@
             this.groupBox1.Controls.Add(this.labelArtigoNovaCompra);
             this.groupBox1.Location = new System.Drawing.Point(32, 55);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(683, 133);
+            this.groupBox1.Size = new System.Drawing.Size(711, 133);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Adicionar Itens";
@@ -102,7 +102,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(455, 87);
+            this.label5.Location = new System.Drawing.Point(503, 86);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(18, 20);
             this.label5.TabIndex = 11;
@@ -112,7 +112,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(241, 84);
+            this.label2.Location = new System.Drawing.Point(272, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 23);
             this.label2.TabIndex = 7;
@@ -121,7 +121,7 @@
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(370, 85);
+            this.textBox1.Location = new System.Drawing.Point(421, 85);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(81, 22);
             this.textBox1.TabIndex = 8;
@@ -129,7 +129,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(222, 34);
+            this.comboBox1.Location = new System.Drawing.Point(237, 34);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(188, 24);
             this.comboBox1.TabIndex = 6;
@@ -147,7 +147,7 @@
             // buttonAddItem
             // 
             this.buttonAddItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddItem.Location = new System.Drawing.Point(481, 81);
+            this.buttonAddItem.Location = new System.Drawing.Point(567, 81);
             this.buttonAddItem.Name = "buttonAddItem";
             this.buttonAddItem.Size = new System.Drawing.Size(127, 26);
             this.buttonAddItem.TabIndex = 4;
@@ -157,7 +157,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown1.Location = new System.Drawing.Point(173, 85);
+            this.numericUpDown1.Location = new System.Drawing.Point(177, 84);
             this.numericUpDown1.Minimum = new decimal(new int[] {
             1,
             0,
@@ -186,7 +186,7 @@
             // comboBoxArtigoNovaCompra
             // 
             this.comboBoxArtigoNovaCompra.FormattingEnabled = true;
-            this.comboBoxArtigoNovaCompra.Location = new System.Drawing.Point(481, 34);
+            this.comboBoxArtigoNovaCompra.Location = new System.Drawing.Point(499, 34);
             this.comboBoxArtigoNovaCompra.Name = "comboBoxArtigoNovaCompra";
             this.comboBoxArtigoNovaCompra.Size = new System.Drawing.Size(196, 24);
             this.comboBoxArtigoNovaCompra.TabIndex = 1;
@@ -195,7 +195,7 @@
             // 
             this.labelArtigoNovaCompra.AutoSize = true;
             this.labelArtigoNovaCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelArtigoNovaCompra.Location = new System.Drawing.Point(422, 35);
+            this.labelArtigoNovaCompra.Location = new System.Drawing.Point(435, 35);
             this.labelArtigoNovaCompra.Name = "labelArtigoNovaCompra";
             this.labelArtigoNovaCompra.Size = new System.Drawing.Size(58, 20);
             this.labelArtigoNovaCompra.TabIndex = 0;
@@ -216,7 +216,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(685, 408);
+            this.dataGridView1.Size = new System.Drawing.Size(713, 408);
             this.dataGridView1.TabIndex = 3;
             // 
             // NomeArtigo
@@ -332,7 +332,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(755, 705);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(771, 693);
             this.Controls.Add(this.labelTotalPrev);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -343,8 +344,12 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelNomeCompra);
             this.Controls.Add(this.textBoxNomeCompra);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "NovaCompra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NovaCompra";
+            this.Load += new System.EventHandler(this.NovaCompra_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

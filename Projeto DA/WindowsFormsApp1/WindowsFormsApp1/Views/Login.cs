@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.Controllers;
+using WindowsFormsApp1.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace WindowsFormsApp1.Views
@@ -40,13 +41,13 @@ namespace WindowsFormsApp1.Views
                 LoginController controller = new LoginController();
 
                 // Cria uma variável para guardar a resposta em vez de usar o Text da janela
-                string resultado = controller.VerificarPass(textUsername.Text, txtPassword.Text);
+                Utilizadores utilizador = controller.VerificarPass(textUsername.Text, txtPassword.Text);
 
                 // Se correu bem, não precisas de mostrar MessageBox, a janela Principal já vai abrir.
-                if (resultado == "Sucesso")
+                if (utilizador != null)
                 {
                     // 1. Abre a janela Principal
-                    Principal janelaPrincipal = new Principal(textUsername.Text);
+                    Principal janelaPrincipal = new Principal(utilizador.Id, utilizador.Nome);
                     janelaPrincipal.Show();
 
                     // 2. Garante que, quando o utilizador fechar a janela Principal, a aplicação fecha por completo
@@ -58,7 +59,7 @@ namespace WindowsFormsApp1.Views
                 else
                 {
                     // Só mostras a mensagem se houver erro (Password incorreta ou Não encontrado)
-                    MessageBox.Show(resultado);
+                    MessageBox.Show("Utilizador não encontrado ou password incorreta");
                 }
             }
         }

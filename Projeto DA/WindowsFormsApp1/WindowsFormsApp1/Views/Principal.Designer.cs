@@ -31,7 +31,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ficheiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.paraPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paraCsvToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
@@ -101,17 +100,10 @@
             // 
             this.exportarToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.exportarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.paraPDFToolStripMenuItem,
             this.paraCsvToolStripMenuItem});
             this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
             this.exportarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exportarToolStripMenuItem.Text = "Exportar";
-            // 
-            // paraPDFToolStripMenuItem
-            // 
-            this.paraPDFToolStripMenuItem.Name = "paraPDFToolStripMenuItem";
-            this.paraPDFToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.paraPDFToolStripMenuItem.Text = "Para PDF";
             // 
             // paraCsvToolStripMenuItem
             // 
@@ -435,7 +427,6 @@
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
         private System.Windows.Forms.ToolStripMenuItem ficheiroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem paraPDFToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paraCsvToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel UtilizadorLogado;

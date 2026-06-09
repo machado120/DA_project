@@ -84,5 +84,28 @@ namespace WindowsFormsApp1.Views
                 }
             }
         }
+
+        private void btnRecoverPwd_Click(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(textUsername.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                MessageBox.Show("Introduza o username e a nova password.");
+                return;
+            }
+            LoginController controller = new LoginController();
+            var utilizadores = controller.GetUtilizadores();
+            var u = utilizadores.FirstOrDefault(x => x.Username == textUsername.Text);
+
+            if (u == null)
+            {
+                MessageBox.Show("Utilizador não encontrado.");
+                return;
+            }
+            u.Password = txtPassword.Text;
+            controller.EditarUtilizador(u);
+            MessageBox.Show("Password atualizada com sucesso!");
+        }
     }
 }
+

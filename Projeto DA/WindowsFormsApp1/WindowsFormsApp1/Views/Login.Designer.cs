@@ -107,6 +107,7 @@
             this.btnRecoverPwd.TabIndex = 5;
             this.btnRecoverPwd.Text = "Recuperar Palavra-Passe";
             this.btnRecoverPwd.UseVisualStyleBackColor = false;
+            this.btnRecoverPwd.Click += new System.EventHandler(this.btnRecoverPwd_Click);
             // 
             // buttonCriarNovoUtilizador
             // 

@@ -29,7 +29,7 @@ namespace WindowsFormsApp1.Views
             listBoxUtilizadores.SelectedIndexChanged -= listBoxUtilizares_SelectedIndexChanged; 
             listBoxUtilizadores.DataSource = null;
             listBoxUtilizadores.DataSource = controller.GetUtilizadores(); 
-            listBoxUtilizadores.DisplayMember = "Nome"; // Exibe o nome do utilizador na lista
+            listBoxUtilizadores.DisplayMember = "Username"; // Exibe o nome do utilizador na lista
             listBoxUtilizadores.SelectedIndex = -1;
             listBoxUtilizadores.SelectedIndexChanged += listBoxUtilizares_SelectedIndexChanged;
 

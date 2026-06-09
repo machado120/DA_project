@@ -165,7 +165,7 @@ namespace WindowsFormsApp1.Controllers
             using (Context context = new Context())
             {
                 var u = context.Utilizadores.Find(userId);
-                return u?.Nome ?? userId.ToString(); // adapta "Nome" ao nome real da propriedade
+                return u?.Username ?? userId.ToString(); // adapta "Nome" ao nome real da propriedade
             }
         }
     }

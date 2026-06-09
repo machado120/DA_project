@@ -47,7 +47,7 @@ namespace WindowsFormsApp1.Views
                 if (utilizador != null)
                 {
                     // 1. Abre a janela Principal
-                    Principal janelaPrincipal = new Principal(utilizador.Id, utilizador.Nome);
+                    Principal janelaPrincipal = new Principal(utilizador.Id, utilizador.Username);
                     janelaPrincipal.Show();
 
                     // 2. Garante que, quando o utilizador fechar a janela Principal, a aplicação fecha por completo

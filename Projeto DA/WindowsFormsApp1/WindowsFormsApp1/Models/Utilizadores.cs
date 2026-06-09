@@ -9,7 +9,7 @@ namespace WindowsFormsApp1.Models
     public class Utilizadores
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public string  password { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }

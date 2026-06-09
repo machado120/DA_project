@@ -184,7 +184,10 @@ namespace WindowsFormsApp1.Views
             }
         }
 
-       
+        private void ModoCompra_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

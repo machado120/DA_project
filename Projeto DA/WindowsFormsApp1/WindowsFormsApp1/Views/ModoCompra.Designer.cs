@@ -443,6 +443,7 @@
             this.Controls.Add(this.buttonVoltar);
             this.Name = "ModoCompra";
             this.Text = "Modo Compra";
+            this.Load += new System.EventHandler(this.ModoCompra_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelModoCompra.ResumeLayout(false);
             this.panelModoCompra.PerformLayout();

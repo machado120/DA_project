@@ -176,6 +176,7 @@
             this.Controls.Add(this.buttonEliminar);
             this.Name = "Gestao_de_Orcamentos";
             this.Text = "Gestao_de_Orcamentos";
+            this.Load += new System.EventHandler(this.Gestao_de_Orcamentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericValor)).EndInit();
             this.ResumeLayout(false);

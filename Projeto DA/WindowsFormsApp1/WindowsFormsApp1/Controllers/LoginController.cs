@@ -12,12 +12,12 @@ namespace WindowsFormsApp1.Controllers
 {
     internal class LoginController
     {
-        public void AdicionarCliente(string nome, string password)
+        public void AdicionarCliente(string Username, string Password)
         {
             using (Context context = new Context())
             {
                 // 1. Procurar na base de dados se já existe alguém com este nome
-                var utilizadorExiste = context.Utilizadores.FirstOrDefault(u => u.Nome == nome);
+                var utilizadorExiste = context.Utilizadores.FirstOrDefault(u => u.Username == Username);
 
                 // 2. Se o utilizadorExiste NÃO for null, significa que já há um na base de dados
                 if (utilizadorExiste != null)
@@ -29,8 +29,8 @@ namespace WindowsFormsApp1.Controllers
 
                 // 3. Se passou pela verificação (não existe), cria e guarda o novo cliente
                 Utilizadores cliente = new Utilizadores();
-                cliente.Nome = nome;
-                cliente.password = password;
+                cliente.Username = Username;
+                cliente.Password = Password;
 
                 context.Utilizadores.Add(cliente);
                 context.SaveChanges();
@@ -41,13 +41,13 @@ namespace WindowsFormsApp1.Controllers
 
 
 
-        public Utilizadores VerificarPass(string nome, string password)
+        public Utilizadores VerificarPass(string Username, string Password)
         {
 
             using (Context context = new Context())
             {
                 // Procura o primeiro utilizador que tenha o Nome igual ao fornecido
-                var utilizador = context.Utilizadores.FirstOrDefault(u => u.Nome == nome);
+                var utilizador = context.Utilizadores.FirstOrDefault(u => u.Username == Username);
 
                 // Se o utilizador for null, significa que não existe na base de dados
                 if (utilizador == null)
@@ -55,7 +55,7 @@ namespace WindowsFormsApp1.Controllers
                     return null;
                 }
                 // Se encontrou o utilizador, compara as passwords
-                if (utilizador.password == password)
+                if (utilizador.Password == Password)
                 {
 
                     return utilizador;

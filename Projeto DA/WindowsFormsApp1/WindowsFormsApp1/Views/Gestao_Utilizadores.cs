@@ -46,8 +46,8 @@ namespace WindowsFormsApp1.Views
             if (_selecionada == null) return;// Se não há nada selecionado, sai do método
 
             {                
-                textBoxNome.Text = _selecionada.Nome;
-                textBoxPassword.Text = _selecionada.password;
+                textBoxNome.Text = _selecionada.Username;
+                textBoxPassword.Text = _selecionada.Password;
             }
         }
        
@@ -83,8 +83,8 @@ namespace WindowsFormsApp1.Views
                 MessageBox.Show("Os campos não podem estar vazios");
                 return;
             }
-            _selecionada.Nome = textBoxNome.Text;
-            _selecionada.password = textBoxPassword.Text;
+            _selecionada.Username = textBoxNome.Text;
+            _selecionada.Password = textBoxPassword.Text;
             controller.EditarUtilizador(_selecionada);
             AtualizarLista();
         }

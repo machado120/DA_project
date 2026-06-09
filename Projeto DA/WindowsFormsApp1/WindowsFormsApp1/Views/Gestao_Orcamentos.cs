@@ -105,6 +105,9 @@ namespace WindowsFormsApp1.Views
             
         }
 
-        
+        private void Gestao_de_Orcamentos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

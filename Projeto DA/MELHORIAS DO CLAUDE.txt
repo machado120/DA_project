@@ -1,0 +1,52 @@
+Guia do Utilizador — Melhorias
+Críticas (podem prejudicar a nota)
+1. Capa não preenchida
+Os campos Autor(es):, Número(s) de Aluno:, Docente: e Data de entrega: estão todos em branco (______). São obrigatórios e têm de ser preenchidos com os dados reais do grupo.
+
+2. Screenshots em falta
+Há ~10 blocos [ INSERIR SCREENSHOT: ... ] ao longo do documento, nenhum substituído por imagens reais. Um guia do utilizador sem capturas de ecrã é incompleto para qualquer avaliador.
+
+3. Data da versão errada
+A capa diz Versão 1.0 — Janeiro 2026. A entrega é Junho 2026. Deve ser corrigida.
+
+Imprecisões técnicas (podem gerar perguntas na defesa)
+4. Secção 3.2 — Scripts SQL inexistentes
+O guia diz para executar db/01_create_database.sql. O projeto usa Entity Framework Code First com DropCreateDatabaseIfModelChanges — a base de dados é criada automaticamente na primeira execução. Não existem scripts SQL para executar. Esta instrução está errada e confundirá quem tentar instalar.
+
+5. Secção 4.1 — "Code First / Database First"
+Diz Entity Framework (Code First / Database First). O projeto é exclusivamente Code First. Database First é o oposto (gera classes a partir de uma BD existente).
+
+6. Secção 6.1/6.2 — Campos não existentes no modelo
+O guia menciona colunas Data de Criação e Data de Última Alteração na listagem de Utilizadores, e um campo Confirmação de Password na criação. O modelo Utilizadores tem apenas Id, Nome, password — estas datas e o campo de confirmação não existem no modelo se não foram implementados.
+
+Formato/Apresentação
+7. Índice manual sem números de página
+O índice foi escrito manualmente sem números de página nem hiperligações. Um índice automático do Word (Referências > Índice) seria mais profissional e funcional.
+
+8. Connection string sem formatação de código
+Na secção 3.3 o XML da connection string aparece como texto corrido. Deveria ter fonte monospace (ex: Courier New) ou caixa de código para ser legível.
+
+9. Secção 17 — Anexos vazios
+Os 4 anexos sugeridos (diagrama de classes, mapa de navegação, screenshots, CSV exemplo) são mencionados mas não estão incluídos. Pelo menos o Anexo D (exemplo de CSV exportado) é trivial de adicionar.
+
+Relatório Excel — Melhorias
+Campos obrigatórios em branco
+1. N° Grupo não preenchido
+O campo N° Grupo: está vazio. Precisa do número do grupo.
+
+2. URL do repositório GitHub em falta
+A linha Repositório GitHub não tem URL. Se o repositório existe, deve ser incluído; é um requisito NF4 e o avaliador vai querer verificar.
+
+Imprecisões factuais (risco alto na defesa)
+3. F1 — "Password encriptada (BCrypt)"
+O relatório afirma Password encriptada (BCrypt) na BD. Se o modelo Utilizadores apenas tem public string password sem qualquer hashing aplicado nos controllers, esta afirmação é falsa e pode ser apontada na defesa. Verifique se BCrypt foi implementado; se não foi, remova essa afirmação e diga simplesmente "Login com Username e Password".
+
+4. NF1 — "migrations"
+O relatório diz Entity Framework (DbContext, DbSet, migrations). O projeto usa DropCreateDatabaseIfModelChanges — isto não são migrations. As EF Migrations são uma funcionalidade distinta (Add-Migration, Update-Database). Deve corrigir para Code First com inicializador DropCreateDatabaseIfModelChanges.
+
+5. Instruções especiais — script SQL
+Tal como no guia, as instruções dizem "Executar o script db/01_create_database.sql". Se a BD é criada automaticamente pelo EF, esta instrução não corresponde ao comportamento real da aplicação.
+
+Sugestão de melhoria menor
+6. Observações gerais — linguagem genérica
+A secção de observações usa texto muito genérico ("distribuição equilibrada", "reuniões regulares"). Se quiserem destacar-se, podem ser mais específicos: mencionar tecnologias usadas, dificuldades superadas, ou decisões de design relevantes.

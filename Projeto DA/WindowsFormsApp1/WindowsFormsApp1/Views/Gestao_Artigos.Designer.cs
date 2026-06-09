@@ -154,6 +154,7 @@
             this.buttonApagarArt.TabIndex = 7;
             this.buttonApagarArt.Text = "Eliminar";
             this.buttonApagarArt.UseVisualStyleBackColor = false;
+
             // 
             // buttonCriarArt
             // 

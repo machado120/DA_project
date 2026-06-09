@@ -140,8 +140,16 @@ namespace WindowsFormsApp1.Views
             if (MessageBox.Show("Eliminar o artigo selecionado?", "Confirmar",
                 MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                controller.EliminarArtigo(_selecionado);
-                AtualizarGrelha(FiltroAtual());
+                try
+                {
+                    controller.EliminarArtigo(_selecionado);
+                    AtualizarGrelha(FiltroAtual());
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Não é possível eliminar um artigo associado a compras.");
+                    AtualizarGrelha(FiltroAtual());
+                }
             }
         }
 
@@ -168,5 +176,7 @@ namespace WindowsFormsApp1.Views
         {
 
         }
+
+        
     }
 }

@@ -91,14 +91,23 @@ namespace WindowsFormsApp1.Views
 
         private void buttonElimiar_Click(object sender, EventArgs e)
         {
-            if(_selecionada == null)
+            if (_selecionada == null)
             {
                 MessageBox.Show("Selecione um utilizador:");
                 return;
             }
-            if(MessageBox.Show("Eliminar utilizador?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            controller.EliminarUtilizador(_selecionada);
-            AtualizarLista() ;
+            if (MessageBox.Show("Eliminar utilizador?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    controller.EliminarUtilizador(_selecionada);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Não é possível eliminar este utilizador.");
+                }
+                AtualizarLista();
+            }
         }
 
         private void Gestao_Utilizadores_Load(object sender, EventArgs e)

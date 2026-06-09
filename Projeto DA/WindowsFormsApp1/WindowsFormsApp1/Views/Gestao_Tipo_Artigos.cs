@@ -75,16 +75,20 @@ namespace WindowsFormsApp1.Views
 
         private void buttonApagarArt_Click(object sender, EventArgs e)
         {
-            if (listBoxTipos.SelectedIndex == -1)
-            {
-                return;
-            }
+            if (listBoxTipos.SelectedIndex == -1) return;
             Tipo_de_Artigos artig = listBoxTipos.SelectedItem as Tipo_de_Artigos;
-            artig.descricao = textBoxDetalhesArtigos.Text;
-            controller.eliminar_Tipoartigo(artig);
 
-
-            atualiza_text();
+            try
+            {
+                artig.descricao = textBoxDetalhesArtigos.Text;
+                controller.eliminar_Tipoartigo(artig);
+                atualiza_text();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Não é possível eliminar um tipo com artigos associados.");
+                atualiza_text();
+            }
         }
     }
 }

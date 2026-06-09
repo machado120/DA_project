@@ -31,6 +31,7 @@ namespace WindowsFormsApp1.Views
             button2.Click += button2_Click; // Aceder ao Modo Compra
             planeamentoToolStripMenuItem.Click += planeamentoToolStripMenuItem_Click;
             estatísticaToolStripMenuItem.Click += estatísticaToolStripMenuItem_Click;
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -168,5 +169,10 @@ namespace WindowsFormsApp1.Views
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) { }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

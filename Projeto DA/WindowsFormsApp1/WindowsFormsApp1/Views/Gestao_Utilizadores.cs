@@ -96,6 +96,11 @@ namespace WindowsFormsApp1.Views
                 MessageBox.Show("Selecione um utilizador:");
                 return;
             }
+            if (_selecionada.Id == _userId)
+            {
+                MessageBox.Show("Não é possível eliminar o utilizador com sessão ativa.");
+                return;
+            }
             if (MessageBox.Show("Eliminar utilizador?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 try

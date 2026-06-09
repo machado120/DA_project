@@ -29,7 +29,7 @@ namespace WindowsFormsApp1.Views
             dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             button1.Click += button1_Click; // Nova Compra / Planear
             button2.Click += button2_Click; // Aceder ao Modo Compra
-            planeamentoToolStripMenuItem.Click += planeamentoToolStripMenuItem_Click;
+            
             estatísticaToolStripMenuItem.Click += estatísticaToolStripMenuItem_Click;
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             

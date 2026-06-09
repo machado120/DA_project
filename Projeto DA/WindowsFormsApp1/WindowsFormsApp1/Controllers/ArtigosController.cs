@@ -108,11 +108,16 @@ namespace WindowsFormsApp1.Controllers
         {
             using (Context context = new Context())
             {
+                var temItens = context.Items.Any(i => i.ArtigoId == artigo.Id);
+                if (temItens)
+                {
+                    MessageBox.Show("Não é possível eliminar um artigo associado a compras.");
+                    return;
+                }
                 context.Artigos.Attach(artigo);
                 context.Artigos.Remove(artigo);
                 context.SaveChanges();
             }
-
         }
     }
 }
